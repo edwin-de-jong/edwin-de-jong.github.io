@@ -92,11 +92,13 @@ This research is based on the notion that you need to <em>remember the past to p
 
 <p>To ensure that the preceding part of the sequences has been learned well before the network is asked to predict later parts of the sequence, we start out by training on the <em>first few steps</em> of each sequence only. Once a reasonable performance level has been reached, the lengths of the sequences presented to the network is increased, until the network is trained on complete sequences.</p>
 
-<p>In experiments with the MNIST stroke sequence data set, this simple technique was found to greatly speed up learning <em>and</em> improve generalization performance. For details, see the <a href="pub/incremental-sequence-learning.pdf">article</a> on Incremental Sequence Learning.</p>
+<p>In experiments with the MNIST stroke sequence data set, this simple technique was found to greatly speed up learning <em>and</em> improve generalization performance. For details, see the <a href="pub/incremental-sequence-learning.pdf">article</a> on Incremental Sequence Learning, submitted to <a href="http://www.iclr.cc/">ICLR 2017</a>.</p>
+
+<p>The Tensorflow implementation of the algorithms used in this research is available <a href="https://github.com/edwin-de-jong/incremental-sequence-learning">here</a>.</p>
 
 <h3 id="the-mnist-stroke-sequence-data-set">The MNIST Stroke Sequence Data Set</h3>
 
-<p><a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data"><img src="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/raw/master/fig/trainimg-25-sequence.png" width="200" /></a> MNIST stroke sequence <a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data">data</a>: all 70000 <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> handwritten digit images transformed to stroke sequences. The code to reproduce the MNIST stroke sequence data is available <a href="https://github.com/edwin-de-jong/mnist-digits-as-stroke-sequences/wiki/MNIST-digits-as-stroke-sequences-(code)">here</a> .</p>
+<p><a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data"><img src="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/raw/master/fig/trainimg-25-sequence.png" width="200" /></a> MNIST stroke sequence <a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data">data</a>: all 70000 <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> handwritten digit images transformed to stroke sequences. The code to reproduce the MNIST stroke sequence data set is available <a href="https://github.com/edwin-de-jong/mnist-digits-as-stroke-sequences/wiki/MNIST-digits-as-stroke-sequences-(code)">here</a> .</p>
 
 
   </div>
