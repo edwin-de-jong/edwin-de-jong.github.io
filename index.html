@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bio</title>
+  <title>Edwin D. de Jong</title>
   <meta name="description" content="">
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="canonical" href="https://edwin-de-jong.github.io//bio.html">
+  <link rel="canonical" href="https://edwin-de-jong.github.io//">
   <link rel="alternate" type="application/rss+xml" title="Edwin D. de Jong" href="https://edwin-de-jong.github.io//feed.xml">
 </head>
 
@@ -38,6 +38,11 @@
     
     
 
+    <a class="page-link" href="/">Edwin D. de Jong</a><span class="exclamationMark">/</span>
+    
+    
+    
+
     <a class="page-link" href="/index.md.org">Edwin D. de Jong</a><span class="exclamationMark">/</span>
     
     
@@ -52,19 +57,51 @@
         <article class="post">
 
   <header class="post-header">
-  <!--  <h1 class="post-title">Bio</h1>-->
+  <!--  <h1 class="post-title">Edwin D. de Jong</h1>-->
   </header>
 
   
 
   <div class="post-content">
-    <p>My lifelong interest is in building new machine learning and artificial intelligence technology with teams of highly motivated people. I studied at <a href="http://www.tudelft.nl/en/">Delf University of Technology</a>, did my PhD at the <a href="https://ai.vub.ac.be">VUB AI Lab</a>. I then went to Jordan Pollack’s <a href="http://www.demo.cs.brandeis.edu">DEMO Lab</a> as a Fulbright Scholar.</p>
+    
+<p><a href="Posts:"></a></p>
+<ul class="posts">
+  
+</ul>
 
-<p>I continued my work on machine learning research at Utrecht University, see <a href="http://people.cs.uu.nl/dejong">my earlier UU page</a>.</p>
+<p><img src="fig/edwin-de-jong.jpg" style="width:150px;height:150px;" /></p>
 
-<p>The impact of new technology is only realized when new ideas are turned into practice. In 2005 I therefore co-founded <a href="https://web.archive.org/web/20151011073210/http://adapticon.com">Adapticon</a>, one of the earliest Deep Learning startups.</p>
+<p>Twitter: <a href="https://twitter.com/EdwinDdeJong">@EdwinDdeJong</a></p>
 
-<p>Since 2012 I’m at <a href="http://www.quintiq.com">Quintiq</a>, first leading the team that developed Quintiq’s Demand Planner which forms part of Quintiq’s S&amp;OP solution, and currently, as of 2016, as Head of Predictive Analytics Technology.</p>
+<p>Github: <a href="https://github.com/edwin-de-jong">edwin-de-jong</a></p>
+
+<p>Email: <img src="fig/edwin-de-jong-contact.png" alt="email" style="width:600px;height:40px;" /></p>
+
+<p>Interests: Building new machine learning technology | Deep Learning | Representation Learning | Coevolution</p>
+
+<h2 id="publications">Publications</h2>
+<p>See <a href="https://scholar.google.com/citations?user=l9w80gcAAAAJ&amp;hl=en">Google Scholar page</a></p>
+
+<h2 id="projects">Projects</h2>
+
+<h3 id="incremental-sequence-learning">Incremental Sequence Learning</h3>
+
+<p><a href="pub/incremental-sequence-learning.pdf">
+<img src="blog/isl/rnn-movies/generative-rnn-training-movie.gif" width="800" />
+</a></p>
+
+<p>These videos show what a generative recurrent neural network has learned over the course of training.
+This research is based on the notion that you need to <em>remember the past to predict the future</em>, as noted in this excellent <a href="https://www.youtube.com/watch?v=-yX1SYeDHbg">presentation on generative RNNs</a> by Alex Graves.</p>
+
+<p>To ensure that the preceding part of the sequences has been learned well before the network is asked to predict later parts of the sequence, we start out by training on the <em>first few steps</em> of each sequence only. Once a reasonable performance level has been reached, the lengths of the sequences presented to the network is increased, until the network is trained on complete sequences.</p>
+
+<p>In experiments with the MNIST stroke sequence data set, this simple technique was found to greatly speed up learning <em>and</em> improve generalization performance. For details, see the <a href="pub/incremental-sequence-learning.pdf">article</a> on Incremental Sequence Learning, submitted to <a href="http://www.iclr.cc/">ICLR 2017</a>.</p>
+
+<p>The Tensorflow implementation of the algorithms used in this research is available <a href="https://github.com/edwin-de-jong/incremental-sequence-learning">here</a>.</p>
+
+<h3 id="the-mnist-stroke-sequence-data-set">The MNIST Stroke Sequence Data Set</h3>
+
+<p><a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data"><img src="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/raw/master/fig/trainimg-25-sequence.png" width="200" /></a> MNIST stroke sequence <a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data">data</a>: all 70000 <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> handwritten digit images transformed to stroke sequences. The code to reproduce the MNIST stroke sequence data set is available <a href="https://github.com/edwin-de-jong/mnist-digits-as-stroke-sequences/wiki/MNIST-digits-as-stroke-sequences-(code)">here</a> .</p>
 
 
   </div>

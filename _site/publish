@@ -1,0 +1,6 @@
+#/bin/sh
+cp _site/index.html .
+mv index.md index.md.org
+git add index.html
+git add index.md.org
+git rm index.md
