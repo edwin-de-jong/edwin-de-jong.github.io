@@ -25,7 +25,7 @@ Github: [https://github.com/edwin-de-jong](edwin-de-jong)
 
 Email: <img src="fig/edwin-de-jong-contact.png" alt="email" style="width:600px;height:40px;">
 
-Interests: Building new machine learning technology &#124; Deep Learning &#124; Representation Learning &#124; Artificial Intelligence &#124; Coevolutionary Algorithms
+Interests: Building new machine learning technology &#124; Deep Learning &#124; Representation Learning &#124; Coevolution
 
 ##Publications
 See [Google Scholar page](https://scholar.google.com/citations?user=l9w80gcAAAAJ&hl=en)	

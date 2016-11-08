@@ -4,15 +4,14 @@
 @charset "utf-8";
 
 
-
 // Our variables
 $base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   11px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.4;
 
-$spacing-unit:     30px;
+$spacing-unit:     20px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -21,12 +20,13 @@ $brand-color:      #2a7ae2;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+$light-blue:       #38ACEC;
 
 // Width of the content area
-$content-width:    1200px; 
+$content-width:    1200px;
 
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        1200px;
 
 
 
@@ -144,7 +144,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: #aaa !important;
+//    color: #aaa !important;
+    color: $light-blue;
     text-decoration: none;
 
     &:visited {
@@ -304,7 +305,7 @@ pre {
   font-size: 16px;
   letter-spacing: 2px;
   text-indent: 2px;
-  padding-top:0.5em;
+  padding-top:0.25em;
 }
 .writtenBy {
   letter-spacing: 0;
@@ -375,7 +376,7 @@ pre {
   font-family: 'PT Sans';
   text-transform: capitalize;
   font-weight: 500;
-  margin-top: 1em;
+  margin-top: 0.251em;
   &,
   &:visited {
     color: $grey-color-dark;
