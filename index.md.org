@@ -21,7 +21,7 @@ title: Edwin D. de Jong
 
 Twitter: [@EdwinDdeJong](https://twitter.com/EdwinDdeJong)
 
-Github: [https://github.com/edwin-de-jong](edwin-de-jong)
+Github: [edwin-de-jong](https://github.com/edwin-de-jong)
 
 Email: <img src="fig/edwin-de-jong-contact.png" alt="email" style="width:600px;height:40px;">
 
@@ -36,9 +36,7 @@ See [Google Scholar page](https://scholar.google.com/citations?user=l9w80gcAAAAJ
 
 
 <a href="pub/incremental-sequence-learning.pdf">
-<img src="blog/isl/rnn-movies/2-movie.gif" width="275">
-<img src="blog/isl/rnn-movies/4-movie.gif" width="275">
-<img src="blog/isl/rnn-movies/9-movie.gif" width="275">
+<img src="blog/isl/rnn-movies/generative-rnn-training-movie.gif" width="800">
 </a>
 
 These videos show what a generative recurrent neural network has learned over the course of training.
