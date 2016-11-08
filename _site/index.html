@@ -33,7 +33,7 @@
     
     
 
-    <a class="page-link" href="/about/">About</a><span class="exclamationMark">/</span>
+    <a class="page-link" href="/bio.html">Bio</a><span class="exclamationMark">/</span>
     
     
     
@@ -56,10 +56,6 @@
   </header>
 
   
-  <div class="tagline">
-  <span class="page-title">Edwin D. de Jong</span> <span class="page-tagline"><em>homepage</em></span>
-  </div>
-  
 
   <div class="post-content">
     
@@ -76,28 +72,31 @@
 
 <p>Email: <img src="edwin-de-jong-contact.png" alt="email" style="width:600px;height:40px;" /></p>
 
+<p>Interests: Building new machine learning technology | Deep Learning | Representation Learning | Artificial Intelligence | Coevolutionary Algorithms</p>
+
 <h2 id="publications">Publications</h2>
-<p>See my <a href="https://scholar.google.com/citations?user=l9w80gcAAAAJ&amp;hl=en">Google Scholar page</a></p>
-
-<h2 id="interests">Interests</h2>
-
-<p>Building new machine learning technology, machine learning, deep learning, representation learning, artificial intelligence, coevolutionary algorithms.</p>
-
-<h2 id="bio">Bio</h2>
-
-<p>My lifelong interest is in building new machine learning and artificial intelligence technology with teams of highly motivated people. I studied at <a href="http://www.tudelft.nl/en/">Delf University of Technology</a>, did my PhD at the <a href="https://ai.vub.ac.be">VUB AI Lab</a>. I then went to Jordan Pollack’s <a href="http://www.demo.cs.brandeis.edu">DEMO Lab</a> as a Fulbright Scholar.</p>
-
-<p>I continued my work on machine learning research at Utrecht University, see <a href="http://people.cs.uu.nl/dejong">my earlier UU page</a>.</p>
-
-<p>The impact of new technology is only realized when new ideas are turned into practice. In 2005 I therefore co-founded <a href="https://web.archive.org/web/20151011073210/http://adapticon.com">Adapticon</a>, one of the earliest Deep Learning startups.</p>
-
-<p>Since 2012 I’m at <a href="http://www.quintiq.com">Quintiq</a>, first leading the team that developed Quintiq’s Demand Planner which forms part of Quintiq’s S&amp;OP solution, and currently, as of 2016, as Head of Predictive Analytics Technology.</p>
+<p>See <a href="https://scholar.google.com/citations?user=l9w80gcAAAAJ&amp;hl=en">Google Scholar page</a></p>
 
 <h2 id="projects">Projects</h2>
 
-<p>MNIST stroke sequence <a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data">data</a>: all 70000 MNIST handwritten digit images transformed to stroke sequences that could have generated the skeletons of the strokes</p>
+<h3 id="incremental-sequence-learning">Incremental Sequence Learning</h3>
 
-<p>MNIST stroke sequence <a href="https://github.com/edwin-de-jong/mnist-digits-as-stroke-sequences/wiki/MNIST-digits-as-stroke-sequences-(code)">code</a> to reproduce the MNIST stroke sequence data.</p>
+<p><a href="pub/incremental-sequence-learning.pdf">
+<img src="blog/isl/rnn-movies/2-movie.gif" width="275" />
+<img src="blog/isl/rnn-movies/4-movie.gif" width="275" />
+<img src="blog/isl/rnn-movies/9-movie.gif" width="275" />
+</a></p>
+
+<p>These videos show what a generative recurrent neural network has learned over the course of training.
+This research is based on the notion that you need to <em>remember the past to predict the future</em>, as noted in this excellent <a href="https://www.youtube.com/watch?v=-yX1SYeDHbg">presentation on generative RNNs</a> by Alex Graves.</p>
+
+<p>To ensure that the preceding part of the sequences has been learned well before the network is asked to predict later parts of the sequence, we start out by training on the <em>first few steps</em> of each sequence only. Once a reasonable performance level has been reached, the lengths of the sequences presented to the network is increased, until the network is trained on complete sequences.</p>
+
+<p>In experiments with the MNIST stroke sequence data set, this simple technique was found to greatly speed up learning <em>and</em> improve generalization performance. For details, see the <a href="pub/incremental-sequence-learning.pdf">article</a> on Incremental Sequence Learning.</p>
+
+<h3 id="the-mnist-stroke-sequence-data-set">The MNIST Stroke Sequence Data Set</h3>
+
+<p><a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data"><img src="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/raw/master/fig/trainimg-25-sequence.png" width="200" /></a> MNIST stroke sequence <a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data">data</a>: all 70000 <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> handwritten digit images transformed to stroke sequences. The code to reproduce the MNIST stroke sequence data is available <a href="https://github.com/edwin-de-jong/mnist-digits-as-stroke-sequences/wiki/MNIST-digits-as-stroke-sequences-(code)">here</a> .</p>
 
 
   </div>
