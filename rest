@@ -1,13 +1,5 @@
-#/bin/sh
 
 cd _site
-
-find . | while read file; do
-echo file $file
-sed -e 's/edwin-de-jong.github.io/edwin-de-jong.github.io/g;' $file > /tmp/tmpfile
-mv /tmp/tmpfile $file
-done
-
 tar -cvf ../site.tar .
 cd ..
 
@@ -19,5 +11,4 @@ rm site.tar
 git add *
 git commit -m site
 git push
-
 
