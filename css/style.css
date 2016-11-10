@@ -9,7 +9,7 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 10;
   padding: 10;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   /*EdJ: this determines the main text font size*/ }
 
 /**
@@ -436,7 +436,7 @@ pre {
   margin-bottom: 20px;
   padding-bottom: 3em !important; }
   .post-content p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     /*EdJ: this determines the main text font size*/ }
   .post-content h2 {
     font-size: 32px; }
@@ -611,3 +611,35 @@ pre {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
+
+div.iframe-link {
+  position: relative;
+  float: left;
+  width: 600px;
+  height: 400px;
+  margin: 0 1em 1em 0; }
+
+a.iframe-link {
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 105%;
+  height: 400px; }
+
+.float-right {
+  float: right;
+  width: 65%; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
