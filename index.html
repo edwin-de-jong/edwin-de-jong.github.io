@@ -12,8 +12,8 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="canonical" href="https://edwin-de-jong.github.io//">
-  <link rel="alternate" type="application/rss+xml" title="Edwin D. de Jong" href="https://edwin-de-jong.github.io//feed.xml">
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="alternate" type="application/rss+xml" title="Edwin D. de Jong" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -28,7 +28,7 @@
 </div>
 <div class="wrapper">
   <div class="trigger site-navigation">
-    <a class="page-link" href="https://edwin-de-jong.github.io/">HOME</a><span class="exclamationMark">/</span>
+    <a class="page-link" href="http://localhost:4000">HOME</a><span class="exclamationMark">/</span>
 
     
     
@@ -38,12 +38,17 @@
     
     
 
-    <a class="page-link" href="/">Edwin D. de Jong</a><span class="exclamationMark">/</span>
+    <a class="page-link" href="/blog/isl/incremental-sequence-learning.html">Incremental Sequence Learning</a><span class="exclamationMark">/</span>
     
     
     
 
-    <a class="page-link" href="/index.md.org">Edwin D. de Jong</a><span class="exclamationMark">/</span>
+    <a class="page-link" href="/blog/mnist-sequence-data/">MNIST sequence data</a><span class="exclamationMark">/</span>
+    
+    
+    
+
+    <a class="page-link" href="/">Edwin D. de Jong</a><span class="exclamationMark">/</span>
     
     
     
@@ -64,44 +69,34 @@
 
   <div class="post-content">
     
-<p><a href="Posts:"></a></p>
-<ul class="posts">
-  
-</ul>
+<p><img src="fig/edwin-de-jong.jpg" style="width:150px;height:150px;float:left;" /></p>
 
-<p><img src="fig/edwin-de-jong.jpg" style="width:150px;height:150px;" /></p>
+<p><span style="float:left;">  Twitter: <a href="https://twitter.com/EdwinDdeJong">@EdwinDdeJong</a></span><br /></p>
 
-<p>Twitter: <a href="https://twitter.com/EdwinDdeJong">@EdwinDdeJong</a></p>
+<p><span style="float:left;">  Github: <span class="rect"><a href="https://github.com/edwin-de-jong">edwin-de-jong</a></span></span><br /></p>
 
-<p>Github: <a href="https://github.com/edwin-de-jong">edwin-de-jong</a></p>
+<p><span style="float:left;">  Email: <img src="fig/edwin-de-jong-contact.png" alt="email" style="width:600px;height:40px;" /></span><br />
+<br /></p>
 
-<p>Email: <img src="fig/edwin-de-jong-contact.png" alt="email" style="width:600px;height:40px;" /></p>
+<p>Interests: Building new machine learning technology | Deep Learning | Representation Learning | Coevolution
+<br /></p>
 
-<p>Interests: Building new machine learning technology | Deep Learning | Representation Learning | Coevolution</p>
+<h3>Publications: on <span class="rect"><a href="https://scholar.google.com/citations?user=l9w80gcAAAAJ&amp;hl=en">Google Scholar page</a></span></h3>
 
-<h2 id="publications">Publications</h2>
-<p>See <a href="https://scholar.google.com/citations?user=l9w80gcAAAAJ&amp;hl=en">Google Scholar page</a></p>
+<p><span class="hline"></span></p>
 
-<h2 id="projects">Projects</h2>
-
-<h3 id="incremental-sequence-learning">Incremental Sequence Learning</h3>
-
-<p><a href="pub/incremental-sequence-learning.pdf">
+<p><a href="blog/isl/incremental-sequence-learning">
 <img src="blog/isl/rnn-movies/generative-rnn-training-movie.gif" width="800" />
 </a></p>
 
-<p>These videos show what a generative recurrent neural network has learned over the course of training.
-This research is based on the notion that you need to <em>remember the past to predict the future</em>, as noted in this excellent <a href="https://www.youtube.com/watch?v=-yX1SYeDHbg">presentation on generative RNNs</a> by Alex Graves.</p>
+<p>Video showing what a generative recurrent neural network has learned over the course of training.<br />
+See: <a href="blog/isl/incremental-sequence-learning">Incremental Sequence Learning</a></p>
 
-<p>To ensure that the preceding part of the sequences has been learned well before the network is asked to predict later parts of the sequence, we start out by training on the <em>first few steps</em> of each sequence only. Once a reasonable performance level has been reached, the lengths of the sequences presented to the network is increased, until the network is trained on complete sequences.</p>
+<p><span class="hline"></span></p>
 
-<p>In experiments with the MNIST stroke sequence data set, this simple technique was found to greatly speed up learning <em>and</em> improve generalization performance. For details, see the <a href="pub/incremental-sequence-learning.pdf">article</a> on Incremental Sequence Learning, submitted to <a href="http://www.iclr.cc/">ICLR 2017</a>.</p>
+<p><a href="blog/mnist-sequence-data/"><img src="blog/mnist-sequence-data/fig/trainimg-25-input.png" width="200" /> | <img src="blog/mnist-sequence-data/fig/trainimg-25-thresholded.png" width="200" /> | <img src="blog/mnist-sequence-data/fig/trainimg-25-thinned.png" width="200" /> | <img src="blog/mnist-sequence-data/fig/trainimg-25-sequence.png" width="275" /></a></p>
 
-<p>The Tensorflow implementation of the algorithms used in this research is available <a href="https://github.com/edwin-de-jong/incremental-sequence-learning">here</a>.</p>
-
-<h3 id="the-mnist-stroke-sequence-data-set">The MNIST Stroke Sequence Data Set</h3>
-
-<p><a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data"><img src="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/raw/master/fig/trainimg-25-sequence.png" width="200" /></a> MNIST stroke sequence <a href="https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data">data</a>: all 70000 <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> handwritten digit images transformed to stroke sequences. The code to reproduce the MNIST stroke sequence data set is available <a href="https://github.com/edwin-de-jong/mnist-digits-as-stroke-sequences/wiki/MNIST-digits-as-stroke-sequences-(code)">here</a> .</p>
+<p>The <a href="blog/mnist-sequence-data">MNIST stroke data</a> sequence learning data set: all 70000 MNIST handwritten digit images transformed to stroke sequences.</p>
 
 
   </div>

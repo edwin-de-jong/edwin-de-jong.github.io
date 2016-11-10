@@ -1,17 +1,22 @@
+html {
+  font-size: 11 px; }
+
 /**
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-  margin: 0;
-  padding: 0; }
+  margin: 10;
+  padding: 10;
+  font-size: 1.4rem;
+  /*EdJ: this determines the main text font size*/ }
 
 /**
  * Basic styling
  */
 body {
-  font: 400 11px/1.4 "PT Sans", Helvetica, Arial, sans-serif;
+  font: 400 11xpx/1.4 "PT Sans", Helvetica, Arial, sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -44,7 +49,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 9.625px; }
+  font-size: 9.625xpx; }
 
 /**
  * Lists
@@ -69,7 +74,7 @@ a {
   color: #38ACEC;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #1385c5; }
   a:hover {
     color: black !important;
     border-bottom: 1px dotted black; }
@@ -403,7 +408,7 @@ pre {
     margin-bottom: 20px; }
 
 .post-meta {
-  font-size: 9.625px;
+  font-size: 9.625xpx;
   color: #828282;
   text-transform: uppercase;
   font-size: 16px; }
@@ -431,7 +436,8 @@ pre {
   margin-bottom: 20px;
   padding-bottom: 3em !important; }
   .post-content p {
-    font-size: 1.5rem; }
+    font-size: 1.4rem;
+    /*EdJ: this determines the main text font size*/ }
   .post-content h2 {
     font-size: 32px; }
     @media screen and (max-width: 1200px) {
@@ -588,3 +594,20 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.rect {
+  padding-top: 0px;
+  padding-bottom: 1px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  display: inline-block; }
+
+.hline {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
