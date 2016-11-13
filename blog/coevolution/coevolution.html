@@ -95,7 +95,7 @@ See the <a href="https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNa
 
 <h3>Pareto-Coevolution: an Evolutionary Multi-Objective Optimization perspective on Coevolution</h3>
 
-<p>A major question in coevolution research has been how the coevolving opponents or test cases can be guided such that the learning process results in overall progress. <a href="http://www.demo.cs.brandeis.edu/papers/ficici_ecal_01.pdf">Ficici</a> and <a href="http://www.demo.cs.brandeis.edu/papers/gecco01_noble.pdf">Noble and Watson</a> noted that by taking a multi-objective point of view, possible opponents or test cases can be viewed as <em>dimensions</em> of the evaluation function. This approach is known as Pareto-coevolution.</p>
+<p>A major question in coevolution research has been how the coevolving opponents or test cases can be guided such that the learning process results in overall progress. <a href="http://www.demo.cs.brandeis.edu/papers/ficici_ecal_01.pdf">Ficici</a> and <a href="http://www.demo.cs.brandeis.edu/papers/gecco01_noble.pdf">Noble and Watson</a> noted that by taking a <a href="https://en.wikipedia.org/wiki/Multi-objective_optimization">Multi-Objective Optimization</a> point of view, possible opponents or test cases can be viewed as <em>dimensions</em> of the evaluation function. This approach is known as Pareto-coevolution.</p>
 
 <h3>Learning the ideal evaluation function</h3>
 
@@ -115,6 +115,18 @@ See the <a href="https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNa
 
 <p><a href="http://www.araya.org/archives/1183"><img src="http://www.araya.org/wp/wp-content/uploads/2016/10/gaussian_vs_gaussian.png" width="400" /></a><br />
 Blog post by Nicholas Guttenberg on stability analysis of GANs: see <a href="http://www.araya.org/archives/1183">here</a> for details.</p>
+
+<h3>Objective Set Compression: extracting the underlying objectives</h3>
+<p>We have seen that individual opponents or test cases can be viewed as <em>objectives</em> in the sense of Multi-Objective Optimization. Taking chess as an example again, it is clear that within the set of all possible chess strategies, there will be similarities between some strategies and differences between others. For example, we could encounter two opponents that favor the same starting strategies, but differ in their end-game. In the same way that examples in machine learning problems can be characterized by <em>features</em>, we may imagine that opponent or test strategies can be characterized by a limited number of <em>features</em> or <em>dimensions</em> that define their action preferences in different contexts. The idea behind <a href="http://www.demo.cs.brandeis.edu/papers/emo_coev.pdf">Objective Set Compression</a> is to see whether a limited set of dimensions can be defined that span the space of all possible opponents or test cases.</p>
+
+<p>The starting point for Objective Set Compression is to consider the interaction outcomes between solutions and opponents or test cases. Let’s consider a simple game: <a href="https://en.wikipedia.org/wiki/Nim">Nim</a>, where players remove one or more matches from one row at a time, and the player that takes the last match wins. For Nim [1, 3], the configuration containing two rows with one and three matches respectively, there are 144 different strategies. After removing first-player strategies that have identical outcomes against all second-player strategies and vice-versa, six unique first-player strategies and nine unique second-player strategies are left. The outcome vectors for all combinations of these unique first-player and second-player strategies are shown in the table below.</p>
+
+<p>|1 0 1 1 0 1 1 0 1|
+0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1
+1 1 1 0 0 0 1 1 1
+1 0 0 1 0 0 1 0 0
+0 0 0 0 0 0 1 1 1</p>
 
 <h3>Representation Learning in the Deep Learning age</h3>
 
