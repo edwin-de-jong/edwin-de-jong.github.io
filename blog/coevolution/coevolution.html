@@ -119,14 +119,18 @@ Blog post by Nicholas Guttenberg on stability analysis of GANs: see <a href="htt
 <h3>Objective Set Compression: extracting the underlying objectives</h3>
 <p>We have seen that individual opponents or test cases can be viewed as <em>objectives</em> in the sense of Multi-Objective Optimization. Taking chess as an example again, it is clear that within the set of all possible chess strategies, there will be similarities between some strategies and differences between others. For example, we could encounter two opponents that favor the same starting strategies, but differ in their end-game. In the same way that examples in machine learning problems can be characterized by <em>features</em>, we may imagine that opponent or test strategies can be characterized by a limited number of <em>features</em> or <em>dimensions</em> that define their action preferences in different contexts. The idea behind <a href="http://www.demo.cs.brandeis.edu/papers/emo_coev.pdf">Objective Set Compression</a> is to see whether a limited set of dimensions can be defined that span the space of all possible opponents or test cases.</p>
 
-<p>The starting point for Objective Set Compression is to consider the interaction outcomes between solutions and opponents or test cases. Let’s consider a simple game: <a href="https://en.wikipedia.org/wiki/Nim">Nim</a>, where players remove one or more matches from one row at a time, and the player that takes the last match wins. For Nim [1, 3], the configuration containing two rows with one and three matches respectively, there are 144 different strategies. After removing first-player strategies that have identical outcomes against all second-player strategies and vice-versa, six unique first-player strategies and nine unique second-player strategies are left. The outcome vectors for all combinations of these unique first-player and second-player strategies are shown in the table below.</p>
+<p>The starting point for Objective Set Compression is to consider the interaction outcomes between solutions and opponents or test cases. Let’s consider a simple game: <a href="https://en.wikipedia.org/wiki/Nim">Nim</a>, where players remove one or more matches from one row at a time, and the player that takes the last match wins. For Nim [1 3], the configuration containing two rows with one and three matches respectively, there are 144 different strategies. After removing first-player strategies that have identical outcomes against all second-player strategies and vice-versa, six unique first-player strategies and nine unique second-player strategies are left. The outcome vectors for all combinations of these unique first-player and second-player strategies are shown in the table below.
+<img src="nim-table.png" width="400" /><br />
+Table: Embedding of the unique Nim[1 3] first-player strategies into a two-dimensional objective space, spanned by five of the nine unique second-player strategies that function as opponents or tests. See <a href="http://www.demo.cs.brandeis.edu/papers/emo_coev.pdf">article</a>.</p>
 
-<p>|1 0 1 1 0 1 1 0 1|
-0 0 0 0 0 0 0 0 0
-1 1 1 1 1 1 1 1 1
-1 1 1 0 0 0 1 1 1
-1 0 0 1 0 0 1 0 0
-0 0 0 0 0 0 1 1 1</p>
+<p>Outcome vectors for each of the six unique first-player strategies in Nim[1 3] against all nine unique second-player (opponent) strategies.</p>
+
+<p>Given the matrix of interaction outcomes, we can now analyze which opponents or tests (second-player strategies in this case) are <em>consistent</em>, in that one test can be viewed as a stronger variant of the other, winning against strictly more players. By doing so, we can combine tests on axes that may be thought to represent the <em>underlying dimensions</em> of the game. It so turns out that the nine opponent strategies can be represented by a set of only two <em>dimensions</em>. The performance of a solution is uniquely characterized by its position in the resulting 2D space; its outcome against each of the nine unique opponent strategies can be derived from its position in the 2D space spanned by these reconstructed underlying objectives.</p>
+
+<p><a href="http://www.demo.cs.brandeis.edu/papers/emo_coev.pdf"><img src="nim-embedding.png" width="800" /></a><br />
+Embedding of the unique Nim[1 3] first-player strategies into a two-dimensional objective space, spanned by five of the nine unique second-player strategies that function as opponents or tests.</p>
+
+<p>Article: De Jong, E.D. and Bucci, A. (2008). <a href="http://www.demo.cs.brandeis.edu/papers/emo_coev.pdf">Objective Set Compression</a>. Multiobjective Problem Solving from Nature, Springer.</p>
 
 <h3>Representation Learning in the Deep Learning age</h3>
 
