@@ -1,0 +1,14 @@
+
+cd _site
+tar -cvf ../site.tar .
+cd ..
+
+mv site.tar ../edwin-de-jong.github.io
+cd ../edwin-de-jong.github.io
+tar -xvf site.tar
+rm site.tar
+
+git add *
+git commit -m site
+git push
+
