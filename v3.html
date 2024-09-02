@@ -46,13 +46,49 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="#about">About</a>
+    <a href="#pathrna">Pathology + RNA Foundation Model</a>
+    <a href="#about">About</a>
+    <a href="#about">About</a>
+    <a href="#about">About</a>
+    <a href="#about">About</a>
+    <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#clients">Clients</a>
   <a href="#contact">Contact</a>
 </div>
 
 <div class="main">
+
+    <section id="pathrna"></section>
+    <h2>Pathology + RNA Foundation Model</h2>
+    Pathology Foundation Models (FMs) such as <a href="https://www.nature.com/articles/s41591-024-02857-3">UNI</a>, <a href="https://www.medrxiv.org/content/10.1101/2023.07.21.23292757v2">Phikon</a>, <a href="https://arxiv.org/abs/2401.04079">RudolfV</a> and <a href="https://arxiv.org/abs/2309.07778">Virchow</a> learn to represent patterns in H&E pathology images using Self-Supervised Learning.
+    To see whether pathology FMs can be enhanced using RNA data, we compared two approaches:
+    <ul>
+        <li>Finetune a pretrained pathology FM by using RNA expression levels as a high-dimensional target vector</li>
+        <li>Use contrastive learning in a <a href="https://openai.com/index/clip/">CLIP</a> setup </li>
+    </ul>
+    We found that both approaches can improve pathology FM performance, as evaluated on a selection of downstream tasks.
+    Poster: <figure>
+    <pathology-rna class="png"></pathology-rna> 
+    </figure>
+
+
+    <figure>
+        <a href="/my-picture">
+          <img src="fig/pathology-rna.png" alt="Pathology-RNA poster">
+        </a>
+        <figcaption>
+            Enhancing Pathology Foundation Models with Transcriptomics. Edwin D. de Jong, Mikhail Karasikov, Marharyta Kurban, Moritz Platscher,
+            Marie Stettler, Fei Tang. Poster at the <a href="https://www.genomicsengland.co.uk/events/genomics-england-research-summit-2024">Genomics England Research Summit 2024</a>. 
+            Full poster: <a href="pub/Pathology-RNA-poster-London-Genomics.pdf">poster.pdf</a>
+            
+            
+        </figcaption>
+      </figure>
+
+  </section>
+  
+
     <section id="about"></section>
   <h2>about</h2>
   About
@@ -71,7 +107,6 @@ clients
 Lorem ipsum dolor sit amet, illum definitiones no quo, maluisse
 </section>
 
-  <a id="INSERT_YOUR_OBJECT_NAME_HERE">about</a>
   <p>This sidebar is of full height (100%) and always shown.</p>
   <p>Scroll down the page to see the result.</p>
   <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
