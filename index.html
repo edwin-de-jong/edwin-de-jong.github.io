@@ -117,12 +117,11 @@ using contrastive learning in a <a href="https://openai.com/index/clip/">CLIP</a
 To analyze what representations a Foundation Model (FM) pre-trained on <a href="https://www.cancer.gov/ccg/research/genome-sequencing/tcga">TCGA</a> using <a href="https://github.com/facebookresearch/dino">DINO</a> learns,
 we cluster the embedding vectors of TCGA patches using <a href="https://lvdmaaten.github.io/tsne/">t-SNE</a>. This results in clusters
  in the embedding space. We then color these clusters in two ways: by disease (left) and 
- by the medical center from which the images originate (right). 
+ by the medical center from which the images originate (right). <br>
 
 The coloring by disease shows that the FM has learned to distinguish different cancer types. 
 The clustering on the right however shows that the overall organization of the embedding space
- is <i>also</i> strongly influenced by the medical center, probably partly due to the well-known issue in pathology of staining differences. 
- This implies a risk for downstream trainings: the embeddings are not only determined by biological features such as 
+ is <i>also</i> strongly influenced by the medical center. This implies a risk for downstream trainings: the embeddings are not only determined by biological features such as 
 the cancer type, but also by the center of origin, which should not play a role in downstream models and can lead to biases.
 </section>
 
