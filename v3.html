@@ -52,14 +52,19 @@ body {
   
 
 <div class="sidenav">
+  <h1>Edwin D. de Jong</h1>
+  Medical AI Researcher
+  <img src="fig/edwin-de-jong.jpg" alt="photo">
+
+
     <a href="#pathrna">Pathology + RNA FM</a>
     <a href="pathFM">Towards Large-scale Pathology FMs</a>"
+    <a href="robustness_analysis">FM Robustness analysis</a>
 </div>
 
 <div class="main">
 
-
-    <section id="pathrna"></section>
+  <section id="pathrna"></section>
     <h2>Pathology + RNA Foundation Model</h2>
     <figure>
       <a href="pub/Pathology-RNA-poster-London-Genomics.pdf">
@@ -73,12 +78,8 @@ body {
       </figure>
 
     Pathology Foundation Models (FMs) such as <a href="https://www.nature.com/articles/s41591-024-02857-3">UNI</a>, <a href="https://www.medrxiv.org/content/10.1101/2023.07.21.23292757v2">Phikon</a>, <a href="https://arxiv.org/abs/2401.04079">RudolfV</a> and <a href="https://arxiv.org/abs/2309.07778">Virchow</a> learn to represent patterns in H&E pathology images using Self-Supervised Learning.
-    To see whether pathology FMs can be enhanced using RNA data, we compared two approaches:
-    <ul>
-        <li>Finetune a pretrained pathology FM by using RNA expression levels as a high-dimensional target vector</li>
-        <li>Use contrastive learning in a <a href="https://openai.com/index/clip/">CLIP</a> setup </li>
-    </ul>
-    We found that both approaches can improve pathology FM performance, as evaluated on a selection of downstream tasks.
+    To see whether pathology FMs can be enhanced using RNA data, we compared two approaches: finetuning a pretrained pathology FM by using RNA expression levels as a high-dimensional target vector vs.
+using contrastive learning in a <a href="https://openai.com/index/clip/">CLIP</a> setup </li>. We found that both approaches can improve pathology FM performance, as evaluated on a selection of downstream tasks.
   </section>
 
 
@@ -89,6 +90,22 @@ body {
   
 </section>
   
+
+<section id="robustness_analysis"></section>
+<h2>Foundation Model Robustness Analysis</h2>
+
+<img src="fig/robustness.png" alt="Color-coded visualization of embedding space clustering">
+
+To analyze what representations a Foundation Model (FM) pre-trained on <a href="https://www.cancer.gov/ccg/research/genome-sequencing/tcga">TCGA</a> using <a href="https://github.com/facebookresearch/dino">DINO</a> learns,
+we cluster the embedding vectors of TCGA patches using <a href="https://lvdmaaten.github.io/tsne/">t-SNE</a>. This results in clusters
+ in the embedding space. We then color these clusters in two ways: by disease (left) and 
+ by the medical center from which the images originate (right). 
+
+The coloring by disease shows that the FM has learned to distinguish different cancer types. 
+The clustering on the right however shows that the overall organization of the embedding space
+ is <i>also</i> strongly influenced by the medical center, probably partly due to the well-known issue in pathology of staining differences. 
+ This implies a risk for downstream trainings: the embeddings are not only determined by biological features such as 
+the cancer type, but also by the center of origin, which should not play a role in downstream models and can lead to biases.
   
 
 </div>
