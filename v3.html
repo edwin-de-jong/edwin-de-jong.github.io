@@ -52,14 +52,27 @@ body {
   
 
 <div class="sidenav">
+  <img src="fig/edwin-de-jong.jpg" alt="photo">
   <h1>Edwin D. de Jong</h1>
   Medical AI Researcher
-  <img src="fig/edwin-de-jong.jpg" alt="photo">
 
+Publications:<br>
+see <a href="https://scholar.google.com/citations?hl=en&user=l9w80gcAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar page/a>
 
+Twitter: <a href="https://x.com/EdwinDdeJong">@EdwinDdeJong</a>
+
+LinkedIn: <a href="https://www.linkedin.com/in/edwin-d-de-jong-260930/">LinkedIn</a>
+
+  <br>   <br>
+   
     <a href="#pathrna">Pathology + RNA FM</a>
-    <a href="pathFM">Towards Large-scale Pathology FMs</a>"
-    <a href="robustness_analysis">FM Robustness analysis</a>
+    <a href="#pathFM">Towards Large-scale Pathology FMs</a>"
+    <a href="#robustness_analysis">FM Robustness analysis</a>
+    <a href="#isl">Incremental Sequence Learning</a>
+    <a href="#mnist1d">MNIST 1d stroke dataset</a>
+
+    
+
 </div>
 
 <div class="main">
@@ -91,7 +104,8 @@ using contrastive learning in a <a href="https://openai.com/index/clip/">CLIP</a
 </section>
   
 
-<section id="robustness_analysis"></section>
+<section id="robustness_analysis">
+
 <h2>Foundation Model Robustness Analysis</h2>
 
 <img src="fig/robustness.png" alt="Color-coded visualization of embedding space clustering">
@@ -106,9 +120,36 @@ The clustering on the right however shows that the overall organization of the e
  is <i>also</i> strongly influenced by the medical center, probably partly due to the well-known issue in pathology of staining differences. 
  This implies a risk for downstream trainings: the embeddings are not only determined by biological features such as 
 the cancer type, but also by the center of origin, which should not play a role in downstream models and can lead to biases.
-  
+</section>
 
-</div>
+
+<section id="isl"></section>
+<h2>Incremental Sequence Learning</h2>
+<img src="fig/generative-rnn-training-movie.gif" alt="Incremental Sequence Learning">
+Recurrent Neural Networks (RNN) can learn to represent internal states that facilitate prediction. This work explores the intuition that
+first learning short sequences makes it easier for the model to learn longer sequences. 
+
+<b>NIPS 2016 Workshop paper:</b> <a href="https://arxiv.org/abs/1611.03068">Incremental Sequence Learning</a> (extended version)
+
+Incremental Sequence Learning <a href="https://edwin-de-jong.github.io/blog/isl/incremental-sequence-learning">blog post</a>
+</section>
+
+
+<section id="mnist1d"></section>
+<h2>MNIST 1D Stroke Dataset</h2>
+<p><a href="blog/mnist-sequence-data/"><img src="blog/mnist-sequence-data/fig/trainimg-25-input.png" width="200" /> | <img src="blog/mnist-sequence-data/fig/trainimg-25-thresholded.png" width="200" /> | <img src="blog/mnist-sequence-data/fig/trainimg-25-thinned.png" width="200" /> | <img src="blog/mnist-sequence-data/fig/trainimg-25-sequence.png" width="275" /></a></p>
+Handwritten digits and letters can naturally be represented as sequences of 1D strokes. To study sequence learning, the well-known MNIST
+dataset was transformed into pen strokes that approximately reproduce the digits in the original dataset. Dataset description and download:
+
+<a href="blog/mnist-sequence-data">MNIST stroke data</a> sequence learning data set: all 70000 MNIST handwritten digit images transformed to 1D stroke sequences.
+
+</section>
+
+
+
+
+
+
    
 </body>
 </html> 
