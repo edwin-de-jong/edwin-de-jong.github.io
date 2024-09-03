@@ -2,6 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="1000">
+<meta name="description" content="Edwin D. de Jong">
+
 <title>Edwin D. de Jong</title>
 <link rel="canonical" href="http://edwin-de-jong.github.io/">
 
@@ -15,7 +19,7 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 280px;
+  width: 20%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -35,11 +39,11 @@ body {
 }
 
 .sidenav a:hover {
-  color: #000000;
+  color: #1b61a2;
 }
 
 .main {
-  margin-left: 280px; /* Same as the width of the sidenav */
+  margin-left: 20%; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
@@ -51,38 +55,47 @@ body {
 </style>
 </head>
 <body>
-
+  
   
 
 <div class="sidenav">
-  <img src="fig/edwin-de-jong.jpg" alt="photo">
+  <img src="fig/edwin-de-jong.jpg" style="width: 100%" alt="photo">
   <h2>Edwin D. de Jong</h2>
-  Medical AI Researcher<br><br>
+  
+ <br><br>
 
-Publications: <a href="https://scholar.google.com/citations?hl=en&user=l9w80gcAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar page</a><br>
-
-<a href="https://x.com/EdwinDdeJong">@EdwinDdeJong</a><br>
+<a href="https://scholar.google.com/citations?hl=en&user=l9w80gcAAAAJ&view_op=list_works&sortby=pubdate">Publications: Google Scholar</a><br>
 
 <a href="https://www.linkedin.com/in/edwin-d-de-jong-260930/">LinkedIn profile</a><br>
+
+<a href="https://x.com/EdwinDdeJong">@EdwinDdeJong</a><br>
    
-   
-    <a href="#pathrna">Pathology + RNA FM</a>
+<a href="#home">Home</a>
+<a href="#pathrna">Pathology + RNA FM</a>
     <a href="#pathFM">Towards Large-scale Pathology FMs</a>
     <a href="#robustness_analysis">FM Robustness analysis</a>
+    <a href="#screenpoint">Breast Cancer Detection</a>
     <a href="#isl">Incremental Sequence Learning</a>
     <a href="#mnist1d">MNIST 1d stroke dataset</a>
-
-    
-
 </div>
 
 <div class="main">
+
+  <section id="home"></section>
+  <h2>Intro</h2>
+  I'm a medical AI researcher with extensive experience who actively contributes to 
+  the AI revolution in healthcare that is currently taking place. At Kaiko.ai 
+  we train, evaluate and apply <a href="#pathFM">medical foundation models</a>. With the research team 
+  at ScreenPoint Medical,
+ we improved the <a href="#screenpoint">breast cancer detection</a> performance of ScreenPoint's Transpara product. One of the areas I 
+ focused on is measuring and improving the robustness of medical AI models. I did my postdoc at Prof. Jordan Pollack's <a href="http://www.demo.cs.brandeis.edu/">DEMO Lab</a> at <a href="https://www.brandeis.edu/">Brandeis University</a>, 
+ and my PhD at the <a href="https://ai.vub.ac.be/">VUB AI Lab</a>. Below are some examples of my work.
 
   <section id="pathrna"></section>
     <h2>Pathology + RNA Foundation Model</h2>
     <figure>
       <a href="pub/Pathology-RNA-poster-London-Genomics.pdf">
-          <img src="fig/pathology-rna.png" alt="Pathology-RNA poster">
+          <img src="fig/pathology-rna.png"  style="width: 100%" alt="Pathology-RNA poster">
         </a>
         <figcaption>
             Enhancing Pathology Foundation Models with Transcriptomics. Edwin D. de Jong, Mikhail Karasikov, Marharyta Kurban, Moritz Platscher,
@@ -111,7 +124,7 @@ using contrastive learning in a <a href="https://openai.com/index/clip/">CLIP</a
 
 
 <figure>
-  <img src="fig/robustness.png" alt="Color-coded visualization of embedding space clustering">
+  <img src="fig/robustness.png" style="width: 100%" alt="Color-coded visualization of embedding space clustering">
 </figure>
 
 To analyze what representations a Foundation Model (FM) pre-trained on <a href="https://www.cancer.gov/ccg/research/genome-sequencing/tcga">TCGA</a> using <a href="https://github.com/facebookresearch/dino">DINO</a> learns,
@@ -125,10 +138,30 @@ The clustering on the right however shows that the overall organization of the e
 the cancer type, but also by the center of origin, which should not play a role in downstream models and can lead to biases.
 </section>
 
+<section id="screenpoint">
+
+    <h2>Breast Cancer Detection</h2>
+
+With the research team at <a href="https://screenpoint-medical.com/">ScreenPoint Medical</a>,
+we improved the breast cancer detection performance of ScreenPoint's Transpara product. 
+The resulting model was evaluated in the large MASAI breast cancer randomized control trial 
+in Denmark reported by Kristina Lång; see <a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00298-X/abstract">The Lancet article</a>. 
+This study found that our AI product reduces radiologist workload by 44%, while 
+detecting 20% more cancer cases, and was recognized by Nature Medicine 
+as one of the <a href="https://portal.research.lu.se/en/prizes/notable-advances-2023-nature-medicine">Notable advances of 2023</a>. 
+</section>
+
 
 <section id="isl"></section>
 <h2>Incremental Sequence Learning</h2>
-<img src="fig/generative-rnn-training-movie.gif" alt="Incremental Sequence Learning"><br>
+
+
+<figure>
+  <img src="fig/generative-rnn-training-movie.gif" style="width: 100%" alt="Incremental Sequence Learning"><br>
+  <figcaption>Internal representations of digits learned by the model, shown over the course of training. See paper for details.
+</figcaption>
+</figure>
+
 
 Recurrent Neural Networks (RNN) can learn to represent internal states that facilitate prediction. This work explores the intuition that
 first learning short sequences makes it easier for the model to learn longer sequences. <br>
@@ -141,7 +174,7 @@ Incremental Sequence Learning <a href="https://edwin-de-jong.github.io/blog/isl/
 
 <section id="mnist1d"></section>
 <h2>MNIST 1D Stroke Dataset</h2>
-<p><a href="blog/mnist-sequence-data/"><img src="fig/mnist1d.png"/></a></p>
+<p><a href="blog/mnist-sequence-data/"><img src="fig/mnist1d.png" style="width: 100%"></a></p>
 Handwritten digits and letters can naturally be represented as sequences of 1D strokes. To study sequence learning, the well-known MNIST
 dataset was transformed into pen strokes that approximately reproduce the digits in the original dataset. Dataset description and download:
 
