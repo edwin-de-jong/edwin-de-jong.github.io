@@ -1,0 +1,43 @@
+{% include base_path %}
+
+<header id="site-header">
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+
+            <!-- First item: "About" becomes "Edwin D. de Jong" on desktop -->
+            <li class="masthead__menu-item masthead__menu-item--lg">
+              <a href="#about">
+                <span class="label-mobile">About</span>
+                <span class="label-desktop">Edwin D. de Jong</span>
+              </a>
+            </li>
+
+            <!-- Optional spacer for aligning second button with text -->
+            <li class="masthead__menu-item nav-spacer"></li>
+
+            <!-- Main nav links -->
+            {% for link in site.data.navigation.main %}
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = base_path %}
+              {% endif %}
+              <li class="masthead__menu-item">
+                <a href="{{ domain }}{{ link.url }}"
+                   {% if link.newtab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                   {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

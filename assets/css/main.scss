@@ -1,0 +1,650 @@
+---
+---
+
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Golos+Text:wght@400..900&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+/* import lora font */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+* {
+  font-kerning: normal;
+  font-feature-settings: "kern" 1;
+}
+
+/* Override only ampersand glyph */
+.ampersand {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.email {
+  font-family: 'Inconsolata', 'Source Code Pro', monospace;
+  font-size: 95%;
+}
+
+.tight-small-caps {
+  font-family: 'Alegreya SC';
+  font-variant: small-caps;
+  font-size: 25.008px;
+  line-height: 0.5;
+  font-weight: 500;
+}
+
+html {
+    font-size: 115%;  // Base for mobile (e.g., 16px)
+  }
+  
+@media (min-width: 992px) {
+html {
+  font-size: 135%;  // or 130% (≈ 19–20px) for tablets/desktops
+}
+}
+
+h1, h2 {
+/*  font-family: $sans-serif, 'Crimson Pro SC',  $serif;
+  font-weight: 500; //600;
+  text-transform: uppercase;
+*/
+
+font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: none; /* don't use all-caps for post headers */
+  letter-spacing: normal;
+  color: #222;  
+  
+  // font-variant: small-caps;
+  font-style: normal;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.0;
+  border-bottom: none !important;
+}
+
+h1 {
+  letter-spacing: 0.11em;
+}
+
+h2 {
+  font-family: $serif;
+  font-weight: 500;
+  color: $dark-gray;
+}
+
+h3, h4, h5, h6 {
+  font-family: $serif, 'Gentium','Alegreya', 'Jost', 'EB Garamond';
+  font-weight: 500; //600;
+  margin-top: 1.5em;
+  margin-bottom: 0.2em;
+  line-height: 1.2;
+  border-bottom: none !important;
+}
+
+body {
+/*    
+  font-family: $serif,'Gentium', 'Alegreya', 'EB Garamond', serif;
+  font-weight: 400; 
+    line-height: 1.35; */    
+/* use Lora */
+  font-family: 'Lora', serif; 
+  font-weight: 400; 
+  line-height: 1.7; /* taller line-height for readability */
+  background-color: $background-color; /*  warm white */		       
+}
+
+.page__content a[href]:not(.btn):not(.button) {
+  color: $nav-bar-color !important; // base color for the text, was 5B7E91 */
+  text-decoration: none !important;              /* remove default underline */
+}
+/* Hover: only the text color changes to your blue; underline stays */
+.page__content a:hover[href]:not(.btn):not(.button) {
+  color: #c83f42 !important; // red hover color
+}
+
+p {
+  margin-bottom: 1.0em !important;
+  line-height: 1.35;
+}
+
+em, i {
+  font-style: italic;
+  font-family: $serif, 'Gentium', 'Alegreya', 'EB Garamond', serif;
+}
+
+strong em, strong i {
+  font-style: italic;
+  font-weight: 500;
+}
+
+strong, b {
+  font-weight: 600; /* or 500, 700, 800 */
+  // font-style: bold;
+}
+
+body, p, li, blockquote, h1, h2, h3, h4, h5, h6 {
+  font-variant-numeric: oldstyle-nums;
+}
+
+// Crimson Pro with custom SC
+// Utility mixin
+@mixin font($family, $file, $weight, $style) {
+  @font-face {
+    font-family: $family;
+    src: url("/assets/fonts/crimson-pro-sc/#{$file}.otf") format("opentype");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+// Map weights to numeric values
+$cp-sc-weights: (
+  "ExtraLight": 200,
+  "Light":      300,
+  "Regular":    400,
+  "Medium":     500,
+  "SemiBold":   600,
+  "Bold":       700,
+  "ExtraBold":  800,
+  "Black":      900
+);
+
+// Emit @font-face for normal + italic
+@each $name, $w in $cp-sc-weights {
+  @include font("Crimson Pro SC", "CrimsonProSC-#{$name}",        $w, normal);
+  @include font("Crimson Pro SC", "CrimsonProSC-#{$name}Italic",  $w, italic);
+}
+
+
+// Delicious
+@font-face {
+  font-family: 'Delicious';
+  src: url('/assets/fonts/delicious/Delicious_R_2021.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'Delicious';
+//   src: url('/assets/fonts/delicious/Delicious_I_2021.otf') format('opentype');
+//   font-weight: 400;
+//   font-style: italic;
+// }
+
+@font-face {
+  font-family: 'Delicious';
+  src: url('/assets/fonts/delicious/Delicious_B_2021.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'Delicious';
+//   src: url('/assets/fonts/delicious/Delicious_BI_2021.otf') format('opentype');
+//   font-weight: 700;
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: 'Delicious';
+//   src: url('/assets/fonts/delicious/Delicious_H_2021.otf') format('opentype');
+//   font-weight: 900;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'Delicious SC';
+//   src: url('/assets/fonts/delicious/Delicious_SC_2021.otf') format('opentype');
+//   font-weight: 400;
+//   font-style: normal;
+//   font-variant: small-caps;
+// }
+
+
+// Source Sans 3
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/assets/fonts/source-sans-3/SourceSans3-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 200 900;   /* full variable weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/assets/fonts/source-sans-3/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 200 900;   /* full variable weight range */
+  font-style: italic;
+}
+
+// Drafting Mono
+@font-face {
+  font-family: 'Drafting Mono';
+  src: url('/assets/fonts/drafting-mono/DraftingMono-Regular.otf') format('truetype-variations');
+  font-weight: 400;   /* full variable weight range */
+  font-style: normal;
+}
+
+// Junction
+@font-face {
+  font-family: 'Junction';
+  src: url('/assets/fonts/junction/Junction-regular.otf') format('truetype-variations');
+  font-weight: 400;   /* full variable weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Junction';
+  src: url('/assets/fonts/junction/Junction-light.otf') format('truetype-variations');
+  font-weight: 300;   /* full variable weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Junction';
+  src: url('/assets/fonts/junction/Junction-bold.otf') format('truetype-variations');
+  font-weight: 600;   /* full variable weight range */
+  font-style: normal;
+}
+
+// Andada Pro
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Andada Pro';
+  src: url('../fonts/andada-pro/AndadaPro-ExtraBoldItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+// .small-caps {
+//   font-family: 'Spectral SC', 'Alegreya SC', 'EB Garamond SC', serif;
+// }
+
+.small-caps {
+  font-family: $serif, serif;
+  font-variant: small-caps;
+  font-variant-numeric: lining-nums;   /* = onum */
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  letter-spacing: 0.05em;
+}
+
+.sidebar h1, 
+.sidebar h2,
+.sidebar .author__bio,
+.sidebar .author__content,
+.sidebar .author__location,
+.sidebar .author__urls.social-icons,
+.author__urls,
+.author__urls a,
+.author__urls li,
+.author__urls button,
+.sidebar .author__urls-wrapper {
+  font-family: $serif, $sans-serif, serif;
+  font-size: 0.95em;
+  font-weight: 400;
+}
+
+/* Sidebar link list spacing */
+.sidebar .author__urls { 
+  margin-top: 1rem;   /* was ~1–1.5rem in the theme */
+}
+.sidebar .author__urls li { 
+  margin-bottom: 0.25rem; 
+  line-height: 1.2;
+}
+// Make sidebar icons same width
+.sidebar .author__urls li i.fa-map-marker {
+  margin-left: -1.5px;  /* tweak until aligned */
+  margin-bottom: 2px;
+}
+.sidebar .author__urls a:hover {
+  color: #c83f42 !important; // hover color: red
+  text-decoration: none !important;              /* remove default underline */
+}
+
+
+.sidebar .author__name {
+  font-family: $serif;
+  font-size: 1.05em;
+  font-weight: 500;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  white-space: nowrap;     /* don’t wrap */
+  overflow: visible;       /* allow it to spill outside */
+}
+@media screen and (max-width: 992px) {
+  .sidebar .author__name {
+    margin-top: -6px;
+  }
+}
+
+.author__urls-wrapper button {
+  font-family: $sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.author__urls-wrapper button {
+  float: left;
+  margin-left: 4em;
+  margin-top: -1.5em;
+}
+
+/* Ensure the dropdown is positioned relative to the wrapper */
+.sidebar .author__urls-wrapper { position: relative; }
+
+/* Open the menu from the right edge (under the Follow button) */
+.sidebar .author__urls {
+  left: auto !important;
+  right: 0;
+}
+
+/* Move the little triangle to the right as well */
+.sidebar .author__urls::before,
+.sidebar .author__urls::after {
+  left: auto;
+  right: 1rem;   /* tweak this to align the arrow with the button */
+}
+
+/* Drop the menu slightly lower so the arrow clears the button */
+.sidebar .author__urls {
+  top: calc(100% - 25px); /* increase this number until arrow is fully visible */
+}
+
+/* Re-align the arrow with the button */
+.sidebar .author__urls::before,
+.sidebar .author__urls::after {
+  top: -6px;   /* arrow height offset */
+  right: 1rem; /* keep it aligned with button */
+}
+
+.masthead,
+.masthead * {
+  font-family: $sans-serif;
+  font-weight: 400;
+  font-size: 0.97em;
+  letter-spacing: 0.02em;
+}
+@media screen and (max-width: 992px) {
+.masthead,
+.masthead * {
+  font-size: 14px;
+}
+}
+
+.masthead, .masthead *, .masthead a, .masthead-nav a {
+  color: $background-color  !important;  // off-white, was: F8F6F1 
+  background-color: $nav-bar-color; //red brown, was blue: #5B7E91
+}
+
+.page__footer,
+.page__footer * {
+  background-color: mix(Black, $primary-color, 35%) !important; // #5B7E91 !important;
+  color: mix(Black, $background-color, 20%); 
+}
+
+html {
+  font-feature-settings: 'onum' 1;
+}
+
+.navicon,
+.navicon::after,
+.navicon::before {
+  background-color: $background-color !important;
+}
+
+.close .navicon {
+  background-color: transparent !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make masthead sticky */
+.masthead {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* keep it above other content */
+}
+
+/* Add padding to body to prevent content being hidden under masthead */
+body {
+  padding-top: 80px; /* adjust based on masthead height */
+}
+
+/* 1. Fix the Top Navigation */
+.masthead {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* 2. Push the whole page down so the nav doesn't cover content */
+body {
+  padding-top: 80px; 
+}
+
+/* 3. The Sidebar Fix */
+@media screen and (min-width: 992px) {
+  .sidebar {
+    position: fixed;
+    
+    /* This aligns the photo to stay right under the nav bar */
+    top: 0;
+    left: 0;
+    
+    /* This pulls the sidebar up to align with the first line of text */
+    margin-top: 0;
+    padding-top: 0;
+    
+    /* Use the theme's grid logic to prevent overlapping text */
+    width: 260px; //edj: make text fit
+    margin-right: 20px;
+    z-index: 1000;
+  }
+}
+
+/* Default style (mobile-first) */
+.about-heading {
+  margin-top: -1.2rem;
+}
+
+/* Larger screens (e.g., desktop and tablets) */
+@media screen and (min-width: 992px) {
+  .about-heading {
+    margin-top: -0.7rem;
+  }
+}
+
+/* Label swap: About → Edwin D. de Jong */
+.label-mobile {
+  display: inline;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.label-desktop {
+  display: none;
+}
+
+/* Desktop breakpoint behavior */
+@media screen and (min-width: 1280px) {
+  .label-mobile {
+    display: none;
+  }
+
+  .label-desktop {
+    display: inline;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  /* Spacer for desktop layout only */
+  .nav-spacer {
+    display: inline-block;
+    width: 43px;  /* Adjust to align second link with content */
+  }
+}
+
+/* Hide spacer on mobile */
+.nav-spacer {
+  display: none;
+}
+
+.embed-wrapper {
+  margin-bottom: -3em; /* default: eat a bit on mobile */
+}
+
+@media screen and (min-width: 1280px) {
+  .embed-wrapper {
+    margin-bottom: -9em; /* eat more on desktop */
+}
+}
+
+.hanging-indent {
+  padding-left: 1.0em;      /* space from left edge */
+  text-indent: -1.0em;      /* pull back the first line */
+}
+
+
+.hr-ghost {
+  border: none;
+  height: 1.5px;
+  background: linear-gradient(
+    to right,
+    $gray,
+  );
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+
+
+/* 2. Fix the Site Title (Stops it from changing to "About") */
+.site-title {
+  font-size: 0 !important; /* Hides the "About" text */
+}
+
+.site-title::before {
+  content: "Edwin D. de Jong"; /* Hardcodes your name */
+  font-size: 1.25rem; 
+  font-weight: 700;
+  display: inline-block;
+}

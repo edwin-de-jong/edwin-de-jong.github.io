@@ -1,0 +1,49 @@
+/* ==========================================================================
+   MASTHEAD
+   ========================================================================== */
+
+   .masthead {
+    position: relative;
+    border-bottom: none; // remove underline
+    background: #F8F6F1;; // or background-color: #F8F6F1;
+    box-shadow: none;
+    z-index: 20;
+  
+    &__inner-wrap {
+      @include container;
+      @include clearfix;
+      padding: 0.75em 1em; // reduced vertical spacing
+      font-family: $sans-serif-narrow;
+      background: transparent; // NEW LINE
+  
+      @include breakpoint($x-large) {
+        max-width: $x-large;
+      }
+  
+      nav {
+        z-index: 10;
+      }
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+.masthead__menu {
+  background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.masthead__menu-item {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
+
+  &--lg {
+    padding-right: 2em;
+    font-weight: 700;
+  }
+}
