@@ -108,7 +108,8 @@ font-family: 'Open Sans', sans-serif;
   
   // font-variant: small-caps;
   font-style: normal;
-  margin-top: 2em;
+//  margin-top: 2em;
+  position: sticky;
   margin-bottom: 1em;
   line-height: 1.0;
   border-bottom: none !important;
@@ -526,9 +527,9 @@ html {
 }
 
 /* Add padding to body to prevent content being hidden under masthead */
-body {
-  padding-top: 80px; /* adjust based on masthead height */
-}
+//body {
+//  padding-top: 80px; /* adjust based on masthead height */
+//}
 
 /* 1. Fix the Top Navigation */
 .masthead {
@@ -538,30 +539,11 @@ body {
   z-index: 1000;
 }
 
-/* 2. Push the whole page down so the nav doesn't cover content */
+///* 2. Push the whole page down so the nav doesn't cover content */
 body {
-  padding-top: 80px; 
+  padding-top: $nav-bar-height;
 }
 
-/* 3. The Sidebar Fix */
-@media screen and (min-width: 992px) {
-  .sidebar {
-    position: fixed;
-    
-    /* This aligns the photo to stay right under the nav bar */
-    top: 0;
-    left: 0;
-    
-    /* This pulls the sidebar up to align with the first line of text */
-    margin-top: 0;
-    padding-top: 0;
-    
-    /* Use the theme's grid logic to prevent overlapping text */
-    width: 260px; //edj: make text fit
-    margin-right: 20px;
-    z-index: 1000;
-  }
-}
 
 /* Default style (mobile-first) */
 .about-heading {
