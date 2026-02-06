@@ -526,21 +526,23 @@ html {
 }
 
 /* Add padding to body to prevent content being hidden under masthead */
-//body {
-//  padding-top: 80px; /* adjust based on masthead height */
-//}
-
-/* 1. Fix the Top Navigation */
-.masthead {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+body {
+  padding-top: $nav-bar-height; /* adjust based on masthead height */
 }
+
 
 ///* 2. Push the whole page down so the nav doesn't cover content */
 body {
   padding-top: $nav-bar-height;
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: 100px;      /* Same value you found earlier */
+    width: 260px;    /* Prevent layout shift */
+    z-index: 900;
+  }
 }
 
 
