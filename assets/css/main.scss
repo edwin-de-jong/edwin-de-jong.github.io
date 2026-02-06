@@ -540,10 +540,19 @@ body {
   .sidebar {
     position: fixed;
     top: 100px;      /* Same value you found earlier */
-    width: 260px;    /* Prevent layout shift */
+    width: 160px;    /* Prevent layout shift */
     z-index: 900;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .sidebar {
+    width: 260px;    /* wider column possible */
+    z-index: 900;
+  }
+}
+
+
 
 
 /* Default style (mobile-first) */
