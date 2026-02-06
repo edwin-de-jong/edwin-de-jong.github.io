@@ -7,8 +7,6 @@
    ========================================================================== */
 
 .sidebar {
-//    position: sticky;
-//    top: 90px;
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
 
@@ -75,7 +73,6 @@
   display: table-cell;
   vertical-align: top;
   width: 36px;
-//  margin-top: $nav-bar-height
   // set width only, for non-square avatars
   // height: 36px;
 
