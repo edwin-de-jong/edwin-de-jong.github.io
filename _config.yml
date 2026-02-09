@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Edwin D. de Jong"
 title_separator          : "-"
 name                     : &name "Edwin D. de Jong"
-description              : &description "Principal Medical AI Researcher"
+description              : &description "Medical AI Researcher"
 url                      : https://edwin-de-jong.github.io/ 
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "edwin-de-jong/edwin-de-jong.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Edwin D. de Jong"
   avatar           : "Edwin-D.-de-Jong.png"
-  bio              : "Principal Medical AI Researcher"
+  bio              : "Medical AI Researcher"
   location         : "Wageningen, NL"
   employer         :
   pubmed           :
