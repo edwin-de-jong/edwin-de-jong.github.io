@@ -21,10 +21,9 @@ redirect_from:
 
 I am a researcher who builds medical AI technology that improves healthcare.
 
-Below I summarize my recent experience. See my selected [papers](#papers), or visit my [Google Scholar profile](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=l9w80gcAAAAJ&pagesize=80&sortby=pubdate) for a full list. Feel free to reach out with questions or if you'd like to discuss some of this work.
+Below I summarize my recent experience. See my selected [papers](#papers), or visit my [Google Scholar profile](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=l9w80gcAAAAJ&pagesize=80&sortby=pubdate) for a full list.
 
-<span class="small-caps"> contact</span>:<span class="email">
-[jong.de.edwin.work@gmail.com](mailto:jong.de.edwin.work@gmail.com)</span>, or contact me on linkedin [here](https://www.linkedin.com/in/edwin-d-de-jong-260930/)
+
 
 
 
@@ -50,8 +49,7 @@ Invited talk on this work in the <a href="https://warwick.ac.uk/fac/cross_fac/ti
       <iframe width="560" height="315" src="https://www.youtube.com/embed/UDkoVZ95nQM?si=CodNTXJNGQUZj_YI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
 
 After this, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trained. As the article shows, Atlas 2 currently leads the Pareto front in performance-robustness trade-offs.
-
-    </p>
+          </p>
   </div>
 </div>
 
@@ -61,16 +59,26 @@ After this, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trai
   <div style="margin-top: 0; flex: 1;">
     <p style="margin-top: 0;">
       <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5em;">
-        <span class="small-caps">Independent Researcher</span>
+        <span class="small-caps">Independent Research</span>
         <span class="small-caps">Nov 2024</span>
       </div>
-      Intrigued by the strong representation of medical centers in embedding spaces, I undertook independent research examining foundation model robustness. As part of this work, I introduced the Robustness Index metric to quantify model stability across medical domains. Article:<br>
-        <a href="https://arxiv.org/abs/2501.18055"><span class="small-caps">📄 Current Pathology Foundation Models are unrobust to Medical Center Differences</span></a>
-      
+      Intrigued by the strong representation of medical centers in embedding spaces, I undertook independent research examining foundation model robustness. As part of this work, I introduced the Robustness Index metric to quantify model stability across medical domains.
+    </p>
+    <p>
+      <img src="/assets/images/papers/robustness-analysis.png"
+       alt="paper icon"
+       style="width:650px; height:300px; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;">
+       </p>
+
+<p>
+Foundation Model (FM) embeddings are clustered using <a href="https://lvdmaaten.github.io/tsne/">t-SNE</a> and colored by disease (left) and medical center  (right). Coloring by disease shows the FM has learned to distinguish cancer types. The coloring on the right however shows the embedding space <em>also</em> strongly represents medical centers. These should not play a role, and can lead to biases in downstream models.
+</p>
+    <p>
+Article:<br>
+        <a href="https://arxiv.org/abs/2501.18055"><span class="small-caps">📄 Current Pathology Foundation Models are unrobust to Medical Center Differences</span></a>      
     </p>
   </div>
 </div>
-
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 1em;">
   <img src="../assets/images/logos/kaiko.png" alt="my org"
@@ -83,7 +91,6 @@ After this, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trai
       </div>
       At <a href="https://kaiko.ai/">Kaiko.ai</a>, we trained  <a href="https://arxiv.org/abs/2404.15217">📄 pathology foundation models</a>. While analyzing the resulting models, I observed that the embedding space strongly encodes medical centers. This sparked my subsequent research into foundation model robustness. 
       See also our poster at the <a href="https://www.genomicsengland.co.uk/events/genomics-england-research-summit-2024">Genomics England Research Summit 2024</a> on <a href="https://edwin-de-jong.github.io/pub/Pathology-RNA-poster-London-Genomics.pdf">📄 Enhancing pathology foundation models with transcriptomics</a>.
-
     </p>
   </div>
 </div>
@@ -99,7 +106,7 @@ After this, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trai
         <span class="small-caps">Sept 2018 - Apr 2022</span>
       </div>
       At <a href="https://screenpoint-medical.com/">ScreenPoint</a> I contributed to Transpara, a radiology AI breast cancer detection product. With the team, we were able to improve breast cancer detection performance beyond the level of human radiologists. <br>
-      The <a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00298-X/abstract">MASAI</a> Randomized Controlled Trial (RCT) showed that Transpara reduces radiologist workload by 44% while at the same time <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00267-X/fulltext">increasing the cancer detection rate by 29%</a>.
+      The <a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00298-X/abstract">MASAI</a> Randomized Controlled Trial (RCT) showed that Transpara reduces radiologist workload by 44% while at the same time <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00267-X/fulltext">increasing the cancer detection rate by 29%</a>.      
     </p>
   </div>
 </div>
@@ -117,63 +124,6 @@ As a mentor in several editions of RockStart's AI Accelerator programme, I evalu
     </p>
   </div>
 </div>
-
-
-
-
-
-<hr class="hr-ghost">
-
-
-
-
-
-<a id="blog" style="display: block; position: relative; top: -50px; visibility: hidden;"></a>
-<h1>Blog Posts</h1>
-
-<span style="font-style: italic;">Occasional writings and tutorials on machine learning.</span>
-
-<div style="display:flex; align-items:flex-start; gap:0.8em; margin-bottom:2em; margin-top: 1.5em;">
-
-  <img src="/assets/images/blogs/blog-icon.png"
-       alt="MLP viz icon"
-       style="width:50px; height:50px; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;">
-
-  <div>
-    <h3 style="margin-top: 0em;">
-      <a href="/viz/mlp/" target="_blank" rel="noopener noreferrer">
-        blog titel
-      </a>
-    </h3>
-
-    <p>
-      uitleg
-    </p>
-  </div>
-</div>
-
-<!-- Blog 1 -->
-<div style="display:flex; align-items:flex-start; gap:0.8em; margin-bottom:2em;">
-
-  <img src="/assets/images/blogs/blog-icon.png"
-       alt="blog icon"
-       style="width:50px; height:50px; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;">
-
-  <div>
-    <h3 style="margin-top: 0em; margin-bottom: 1em;">
-      blog titel
-    </h3>
-
-    <p style="margin-bottom:0; margin-top:-0.8em; font-size: 1.0rem">
-      auteurs
-    </p>
-
-    <p style="margin-top:0.4em;">
-      samenvatting
-    </p>
-  </div>
-</div>
-
 
 
 <!-- Custom styled HR -->
@@ -297,12 +247,6 @@ Biomedical Foundation Models (FMs) are rapidly transforming AI-enabled healthcar
 Ten current publicly available pathology FMs are evaluated. We find that all current pathology foundation models evaluated represent the medical center to a strong degree.     
     </p>
 
-    <p>
-      <img src="/assets/images/papers/robustness-analysis.png"
-       alt="paper icon"
-       style="width:650px; height:300px; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;"></p>
-
-    <p>
     <details style="margin-top:0.2em;">
       <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary>
       <p style="margin-top:0.4em;">
@@ -429,4 +373,11 @@ We introduce and make available a novel sequence learning task and data set: pre
 
 <hr class="hr-ghost">
 
+<a id="contact" style="display: block; position: relative; top: -50px; visibility: hidden;"></a>
+<h1>Contact</h1>
+
+Feel free to reach out with questions or if you'd like to discuss some of this work.
+
+<span class="small-caps"> contact</span>:<span class="email">
+[jong.de.edwin.work@gmail.com](mailto:jong.de.edwin.work@gmail.com)</span>, or contact me on linkedin [here](https://www.linkedin.com/in/edwin-d-de-jong-260930/)
 
