@@ -38,7 +38,7 @@ Below I summarize my recent experience. See my selected [papers](#papers) below,
     <p style="margin-top: 0;">
       <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5em;">
         <span class="small-caps">Principal Machine Learning Scientist</span>
-        <span class="small-caps">Dec 2024 - present</span>
+        <span class="small-caps">Dec 2024 - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
       </div>
       Soon after I started at <a href="https://www.aignostics.com/">Aignostics</a>, we trained the first <a href="https://arxiv.org/abs/2501.05409">📄 Atlas</a> foundation model.
 Building further on my independent research into robustness, I collaborated with the <a href="https://www.bifold.berlin/">BIFOLD</a> team at TU Berlin to develop <a href="https://github.com/bifold-pathomics/PathoROB">PathoROB</a>, a benchmark for evaluating robustness in pathology foundation models:<br><br>
@@ -67,7 +67,7 @@ After this, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trai
     <p>
       <img src="/assets/images/papers/robustness-analysis.png"
        alt="robustness analysis"
-       style="width:650px; height:300px; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;">
+       style="width:100%; height:auto; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;">
        </p>
 
 <p>
@@ -86,7 +86,7 @@ Article:<br>
   <div style="margin-top: 0; flex: 1;">
     <p style="margin-top: 0;">
       <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5em;">
-        <span class="small-caps">Researcher</span>
+        <span class="small-caps">Lead Multimodal ML / Staff ML Researcher</span>
         <span class="small-caps">May 2022 - Nov 2024</span>
       </div>
       At <a href="https://kaiko.ai/">Kaiko.ai</a>, we trained  <a href="https://arxiv.org/abs/2404.15217">📄 pathology foundation models</a>. While analyzing the resulting models, I observed that the embedding space strongly encodes medical centers. This sparked my subsequent research into foundation model robustness. 
@@ -107,7 +107,7 @@ Article:<br>
       </div>
       At <a href="https://screenpoint-medical.com/">ScreenPoint</a> I contributed to Transpara, a radiology AI breast cancer detection product. With the team, we were able to improve breast cancer detection performance beyond the level of human radiologists. We obtained FDA approval. Transpara is meanwhile deployed in over 30 countries worldwide, and it has been selected by <a href="https://screenpoint-medical.com/insights/screenpoint-medical-showcases-transpara-breast-ai-suite-at-rsna-2025">40%</a> of the <a href="https://health.usnews.com/health-care/best-hospitals/articles/best-hospitals-honor-roll-and-overview">best US hospitals</a>.<br><br>
       
-      The <a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00298-X/abstract">MASAI</a> Randomized Controlled Trial (RCT) showed that Transpara reduces radiologist workload by 44% while at the same time <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00267-X/fulltext">increasing the cancer detection rate by 29%</a>. The study was named a <a href="https://www.nature.com/articles/s41591-023-02701-0">Notable advance of 2023</a> by <a href="https://www.nature.com/nm/">Nature Medicine</a>.
+      The <a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00298-X/abstract">MASAI</a> Randomized Controlled Trial (RCT) showed that Transpara reduces radiologist workload by 44% while at the same time <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00267-X/fulltext">increasing the cancer detection rate by 29%</a>. This study was named a <a href="https://www.nature.com/articles/s41591-023-02701-0">Notable advance of 2023</a> by <a href="https://www.nature.com/nm/">Nature Medicine</a>.
 
     </p>
   </div>
@@ -208,12 +208,12 @@ Biomedical Foundation Models (FMs) are rapidly transforming AI-enabled healthcar
 <small>Maximilian Alber, Stephan Tietz, Jonas Dippel, Timo Milbich, Timothée Lesort, Panos Korfiatis, Moritz Krügener, Beatriz Perez Cancer, Neelay Shah, Alexander Möllers, Philipp Seegerer, Alexandra Carpen-Amarie, Kai Standvoss, Gabriel Dernbach, <strong>Edwin de Jong</strong>, Simon Schallenberg, Andreas Kunft, Helmut Hoffer von Ankershoffen, Gavin Schaeferle, Patrick Duffy, Matt Redlon, Philipp Jurmeister, David Horst, Lukas Ruff, Klaus-Robert Müller, Frederick Klauschen, Andrew Norgan</small>
     </p>
     <p>
-    This article introduces the first Atlas foundation model.
+<a name="arxiv-unrobust" id="arxiv-unrobust"></a>    This article introduces the first Atlas foundation model.
     </p>
 
     <details style="margin-top:0.2em;">
-        <a name="arxiv-unrobust" id="arxiv-unrobust">
-      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary></a>
+        
+      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary>
       <p style="margin-top:0.4em;">
       Recent advances in digital pathology have demonstrated the effectiveness of foundation models across diverse applications. In this report, we present Atlas, a novel vision foundation model based on the RudolfV approach. Our model was trained on a dataset comprising 1.2 million histopathology whole slide images, collected from two medical institutions: Mayo Clinic and Charité - Universtätsmedizin Berlin. Comprehensive evaluations show that Atlas achieves state-of-the-art performance across twenty-one public benchmark datasets, even though it is neither the largest model by parameter count nor by training dataset size.
       </p>
@@ -251,7 +251,7 @@ Ten current publicly available pathology FMs are evaluated. We find that all cur
     </p>
 
     <details style="margin-top:0.2em;">
-          <a name="towards-robust-fms" id="towards-robust-fms">      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary> </a>
+          <a name="towards-robust-fms" id="towards-robust-fms"></a>      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary> 
       <p style="margin-top:0.4em;">
       Pathology Foundation Models (FMs) hold great promise for healthcare. Before they can be used in clinical practice, it is essential to ensure they are robust to variations between medical centers. We measure whether pathology FMs focus on biological features like tissue and cancer type, or on the well known confounding medical center signatures introduced by staining procedure and other differences. We introduce the Robustness Index. This novel robustness metric reflects to what degree biological features dominate confounding features. Ten current publicly available pathology FMs are evaluated. We find that all current pathology foundation models evaluated represent the medical center to a strong degree. Significant differences in the robustness index are observed. Only one model so far has a robustness index greater than one, meaning biological features dominate confounding features, but only slightly. A quantitative approach to measure the influence of medical center differences on FM-based prediction performance is described. We analyze the impact of unrobustness on classification performance of downstream models, and find that cancer-type classification errors are not random, but specifically attributable to same-center confounders: images of other classes from the same medical center. We visualize FM embedding spaces, and find these are more strongly organized by medical centers than by biological factors. As a consequence, the medical center of origin is predicted more accurately than the tissue source and cancer type. The robustness index introduced here is provided with the aim of advancing progress towards clinical adoption of robust and reliable pathology FMs.
       </p>
@@ -322,10 +322,10 @@ Ten current publicly available pathology FMs are evaluated. We find that all cur
     <p>
       <img src="/assets/images/papers/pathology-rna-wide.png"
        alt="pathology RNA"
-       style="width:800px; height:200px; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;"></p>
+       style="width:100%; height:auto; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;"></p>
 
     <p>
-Pathology Foundation Models (FMs) such as UNI, Phikon, RudolfV and Virchow learn to represent patterns in H&E pathology images using Self-Supervised Learning. To see whether pathology FMs can be enhanced using RNA data, we compared two approaches: finetuning a pretrained pathology FM by using RNA expression levels as a high-dimensional target vector vs. using contrastive learning in a CLIP setup . We found that both approaches can improve pathology FM performance, as evaluated on a selection of downstream tasks.
+Pathology Foundation Models (FMs) such as UNI, Phikon, RudolfV and Virchow learn to represent patterns in H&E pathology images using Self-Supervised Learning. To see whether pathology FMs can be enhanced using RNA data, we compared two approaches: finetuning a pretrained pathology FM by using RNA expression levels as a high-dimensional target vector vs. using contrastive learning in a CLIP setup. We found that both approaches can improve pathology FM performance, as evaluated on a selection of downstream tasks.
     </p>
 
   </div>
@@ -354,13 +354,13 @@ Pathology Foundation Models (FMs) such as UNI, Phikon, RudolfV and Virchow learn
       <strong>Edwin D. de Jong</strong>
     </p>
     <p>
-    This paper studies a generative Mixture Density RNN model for sequence learning. It introduces Incremental Sequence Learning: an approach to sequence learning where the length of training sequences is gradually increased over the course of training. Incremental Sequence Learning is found to speed up sequence learning by a factor 20, to reduce the test error, and to perform more robustly. <br><br>
+    This paper studies a generative Mixture Density RNN model for sequence learning. It introduces Incremental Sequence Learning: an approach to sequence learning where the length of training sequences is gradually increased over the course of training. Incremental Sequence Learning is found to speed up sequence learning by an order of magnitude, to reduce the test error, and to perform more robustly. <br><br>
 
 The paper introduces and makes available the MNIST pen stroke sequences dataset: a novel sequence learning task and data set that represents MNIST digits as sequences of pen movements that reproduce the digit.
     </p>
 
     <details style="margin-top:0.2em;">
-<a id="projects" style="display: block; position: relative; top: -50px; visibility: hidden;">      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary></a>
+<a id="projects" style="display: block; position: relative; top: -50px; visibility: hidden;"></a>      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary>
       <p style="margin-top:0.4em;">
       Deep learning research over the past years has shown that by increasing the scope or difficulty of the learning problem over time, increasingly complex learning problems can be addressed. We study incremental learning in the context of sequence learning, using generative RNNs in the form of multi-layer recurrent Mixture Density Networks. While the potential of incremental or curriculum learning to enhance learning is known, indiscriminate application of the principle does not necessarily lead to improvement, and it is essential therefore to know which forms of incremental or curriculum learning have a positive effect. This research contributes to that aim by comparing three instantiations of incremental or curriculum learning.<br><br>
       
@@ -386,21 +386,21 @@ We introduce and make available a novel sequence learning task and data set: pre
   <div>
     <h3 style="margin:0 0 0.3em 0;">
       <a href="https://github.com/bifold-pathomics/PathoROB">
-      PathoROB benchmark</a>: robustness of pathology foundation models to medical center differences
+      PathoROB benchmark</a>: is your pathology foundation model robust?
 
     </h3>
     <p>
-    Pathology AI research (see papers <a href="#arxiv-unrobust">above</a>) showed that pathology foundation models (FMs) not only learn <em>biological</em> concepts such as organs, tissue types and types of cancer, but also represent <em>non-biological</em> information such as the medical center where the tissue sample was processed. Our <a href="#towards-robust-fms">research</a> has shown that such differences can lead to incorrect diagnosis predictions in downstream models.
+    Our work has  <a href="#arxiv-unrobust">shown</a> that pathology foundation models (FMs) not only learn <em>biological</em> concepts such as organs, tissue types and types of cancer, but also represent <em>non-biological</em> information such as the medical center where the tissue sample was processed. Additionally, we <a href="#towards-robust-fms">found</a> that such differences can lead to incorrect diagnosis predictions in downstream models.
 
 
     <p>
       <img src="/assets/images/papers/pathorob_overview.png"
        alt="PathoROB overview"
-       style="width:800px; height:=200px; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;"></p>
+       style="width:100%; height:=auto; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;"></p>
 
 
 
-The       <a href="https://github.com/bifold-pathomics/PathoROB">PathoROB benchmark</a> measures the extent to which pathology FMs are robust to such confounding, non-biological differences. It comprises four datasets, covering 28 biological classes from 34 medical centers. It computes and reports three metrics; see figure above.	
+The <a href="https://github.com/bifold-pathomics/PathoROB">PathoROB benchmark</a> measures the extent to which pathology FMs are robust to such confounding, non-biological differences. It comprises four datasets, covering 28 biological classes from 34 medical centers. It computes and reports three metrics; see figure above. You can find our leaderboard of robust pathology foundation models <a href="https://github.com/bifold-pathomics/PathoROB?tab=readme-ov-file#leaderboard-robustness-index">here</a>.	
     </p>
 
   </div>
