@@ -1,7 +1,7 @@
 ---
 permalink: /
 title:  "Edwin D. de Jong" # null #"About Me"
-excerpt: "About me"
+excerpt: ""
 author_profile: true
 redirect_from:
   - /about/
@@ -21,7 +21,8 @@ redirect_from:
 
 I am a researcher who builds medical AI technology that improves healthcare.
 
-Below I summarize my recent experience. See my selected [papers](#papers) below, or visit my [Google Scholar profile](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=l9w80gcAAAAJ&pagesize=80&sortby=pubdate) for a full list.
+
+Below I summarize my recent experience. See my selected [papers](#papers) below, or view my full publication list on Google Scholar <img src="../assets/images/logos/scholar.png" width=20px> [here](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=l9w80gcAAAAJ&pagesize=80&sortby=pubdate). 
 
 
 
@@ -414,5 +415,5 @@ The <a href="https://github.com/bifold-pathomics/PathoROB">PathoROB benchmark</a
 Feel free to reach out with questions or if you'd like to discuss some of this work.
 
 <span class="small-caps"> contact</span>:<span class="email">
-[jong.de.edwin.work@gmail.com](mailto:jong.de.edwin.work@gmail.com)</span>, or contact me on linkedin [here](https://www.linkedin.com/in/edwin-d-de-jong-260930/)
+[jong.de.edwin.work@gmail.com](mailto:jong.de.edwin.work@gmail.com)</span>, or contact me on LinkedIn <img src="../assets/images/logos/linkedin.png" width=20px>  [here](https://www.linkedin.com/in/edwin-d-de-jong-260930/)
 
