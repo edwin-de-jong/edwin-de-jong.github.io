@@ -198,7 +198,7 @@ Biomedical Foundation Models (FMs) are rapidly transforming AI-enabled healthcar
   <!-- Text content -->
   <div>
     <h3 style="margin:0 0 0.3em 0;">
-      <a href="https://www.arxiv.org/art">
+      <a href="https://arxiv.org/abs/2501.05409">
       Atlas: A Novel Pathology Foundation Model by Mayo Clinic, Charité, and Aignostics
       </a>
     </h3>
@@ -262,6 +262,12 @@ Ten current publicly available pathology FMs are evaluated. We find that all cur
 
 
 
+<!-- year -->
+<div style="display:flex; align-items:flex-start; gap:1.2em; margin-bottom:0.5em;">
+  <div style="margin-left: calc(50px + 0.8em);">
+    <h2 style="margin:0;">2024</h2>
+  </div>
+</div>
 
 
 <!-- Paper -->
