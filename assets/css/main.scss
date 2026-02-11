@@ -641,13 +641,3 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 992px) {
-  .author__urls-wrapper {
-    button {
-      display: none !important;
-    }
-    .author__urls {
-    display: none !important;
-    }
-  }
-}

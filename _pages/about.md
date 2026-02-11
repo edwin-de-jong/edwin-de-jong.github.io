@@ -42,14 +42,14 @@ Below I summarize my recent experience. See my selected [papers](#papers) below,
         <span class="small-caps">Dec 2024 - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
       </div>
       Soon after I started at <a href="https://www.aignostics.com/">Aignostics</a>, we trained the first <a href="https://arxiv.org/abs/2501.05409">📄 Atlas</a> foundation model.
-Building further on my independent research into robustness, I collaborated with the <a href="https://www.bifold.berlin/">BIFOLD</a> team at TU Berlin to develop <a href="https://github.com/bifold-pathomics/PathoROB">PathoROB</a>, a benchmark for evaluating robustness in pathology foundation models:<br><br>
+Building further on my earlier research into robustness, I collaborated with the <a href="https://www.bifold.berlin/">BIFOLD</a> team at TU Berlin to develop <a href="#PathoROB">PathoROB</a>, a benchmark for evaluating robustness in pathology foundation models:<br><br>
         <a href="https://arxiv.org/abs/2507.17845">📄 Towards Robust Foundation Models for Digital Pathology</a><br><br>
 
 Invited talk on this work in the <a href="https://warwick.ac.uk/fac/cross_fac/tia/seminars/">TIA seminar series</a>:
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/UDkoVZ95nQM?si=CodNTXJNGQUZj_YI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
 
-After this, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trained; a 2-billion parameter model trained on 5.5 million WSIs and currently one of the most robust pathology models globally. As the article shows, at the time of publication, Atlas 2 leads the Pareto front in performance-robustness trade-offs.
+Next, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trained; a 2-billion parameter model trained on 5.5 million WSIs and currently one of the most robust pathology models globally. As the article shows, at the time of publication, Atlas 2 leads the Pareto front in performance-robustness trade-offs.
           </p>
   </div>
 </div>
@@ -71,11 +71,15 @@ After this, <a href="https://arxiv.org/abs/2601.05148">📄 Atlas 2</a> was trai
        style="width:100%; height:auto; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;">
        </p>
 
-<p>
+
+    <details style="margin-top:0.2em;">
+      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">Figure explanation</summary>
+      <p style="margin-top:0.4em;">
 Foundation Model (FM) embeddings are clustered using <a href="https://lvdmaaten.github.io/tsne/">t-SNE</a> and colored by disease (left) and medical center  (right). Coloring by disease shows the FM has learned to distinguish cancer types. The coloring on the right however shows the embedding space <em>also</em> strongly represents medical centers. These should not play a role, and can lead to biases in downstream models.
 </p>
+    </details><br>
+
     <p>
-Article:<br>
         <a href="#arxiv-unrobust"><span class="small-caps">📄 Current Pathology Foundation Models are unrobust to Medical Center Differences</span></a>      
     </p>
   </div>
@@ -108,7 +112,7 @@ Article:<br>
       </div>
       At <a href="https://screenpoint-medical.com/">ScreenPoint</a> I contributed to Transpara, a radiology AI breast cancer detection product. With the team, we were able to improve breast cancer detection performance beyond the level of human radiologists. We obtained FDA approval. Transpara is meanwhile deployed in over 30 countries worldwide, and it has been selected by <a href="https://screenpoint-medical.com/insights/screenpoint-medical-showcases-transpara-breast-ai-suite-at-rsna-2025">40%</a> of the <a href="https://health.usnews.com/health-care/best-hospitals/articles/best-hospitals-honor-roll-and-overview">best US hospitals</a>.<br><br>
       
-      The <a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00298-X/abstract">MASAI</a> Randomized Controlled Trial (RCT) showed that Transpara reduces radiologist workload by 44% while at the same time <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00267-X/fulltext">increasing the cancer detection rate by 29%</a>. This study was named a <a href="https://www.nature.com/articles/s41591-023-02701-0">Notable advance of 2023</a> by <a href="https://www.nature.com/nm/">Nature Medicine</a>.
+      The <a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00298-X/abstract">MASAI</a> Randomized Controlled Trial (RCT) showed that Transpara reduces radiologist workload by 44% while at the same time <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00267-X/fulltext">increasing the cancer detection rate by 29%</a>. It was named a <a href="https://www.nature.com/articles/s41591-023-02701-0">Notable advance of 2023</a> by <a href="https://www.nature.com/nm/">Nature Medicine</a>.
 
     </p>
   </div>
@@ -174,9 +178,9 @@ Towards Robust Foundation Models for Digital Pathology
       <small>Jonah Kömen*, <strong>Edwin D. de Jong*</strong>, Julius Hense*, Hannah Marienwald, Jonas Dippel, Philip Naumann, Eric Marcus, Lukas Ruff, Maximilian Alber, Jonas Teuwen, Frederick Klauschen, Klaus-Robert Müller</small>
     </p>
     <p>
-    We evaluate the robustness of 20 current pathology foundation models against medical center differences caused by variations in surgical and endoscopic techniques, laboratory procedures, and scanner technology. We introduce metrics to quantify robustness and find that lack of robustness can lead to diagnostic errors in downstream prediction models.<br><br>
+    We evaluate the robustness of 20 current pathology foundation models against medical center differences. We find this lack of robustness can lead to diagnostic errors in downstream prediction models.<br><br>
 
-We introduce the <a href="https://github.com/bifold-pathomics/PathoROB">PathoROB</a> benchmark for evaluation of foundation model robustness, covering four datasets and 28 biological classes from 34 medical centers. 
+We introduce the <a href="#PathoROB">PathoROB</a> benchmark for evaluation of foundation model robustness, covering four datasets and 28 biological classes from 34 medical centers, and three metrics to quantify robustness.
     </p>
 
     <details style="margin-top:0.2em;">
@@ -205,9 +209,7 @@ Biomedical Foundation Models (FMs) are rapidly transforming AI-enabled healthcar
     <p style="margin:0 0 0.3em; font-style:italic;">
       arXiv preprint
     </p>
-    <p style="margin-bottom:0; margin-top:-0.8em; font-size: 1.0rem">
-<small>Maximilian Alber, Stephan Tietz, Jonas Dippel, Timo Milbich, Timothée Lesort, Panos Korfiatis, Moritz Krügener, Beatriz Perez Cancer, Neelay Shah, Alexander Möllers, Philipp Seegerer, Alexandra Carpen-Amarie, Kai Standvoss, Gabriel Dernbach, <strong>Edwin de Jong</strong>, Simon Schallenberg, Andreas Kunft, Helmut Hoffer von Ankershoffen, Gavin Schaeferle, Patrick Duffy, Matt Redlon, Philipp Jurmeister, David Horst, Lukas Ruff, Klaus-Robert Müller, Frederick Klauschen, Andrew Norgan</small>
-    </p>
+
     <p>
 <a name="arxiv-unrobust" id="arxiv-unrobust"></a>    This article introduces the first Atlas foundation model.
     </p>
@@ -215,7 +217,10 @@ Biomedical Foundation Models (FMs) are rapidly transforming AI-enabled healthcar
     <details style="margin-top:0.2em;">
         
       <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary>
-      <p style="margin-top:0.4em;">
+
+<small>Maximilian Alber, Stephan Tietz, Jonas Dippel, Timo Milbich, Timothée Lesort, Panos Korfiatis, Moritz Krügener, Beatriz Perez Cancer, Neelay Shah, Alexander Möllers, Philipp Seegerer, Alexandra Carpen-Amarie, Kai Standvoss, Gabriel Dernbach, <strong>Edwin de Jong</strong>, Simon Schallenberg, Andreas Kunft, Helmut Hoffer von Ankershoffen, Gavin Schaeferle, Patrick Duffy, Matt Redlon, Philipp Jurmeister, David Horst, Lukas Ruff, Klaus-Robert Müller, Frederick Klauschen, Andrew Norgan</small>
+
+<p style="margin-top:0.4em;">
       Recent advances in digital pathology have demonstrated the effectiveness of foundation models across diverse applications. In this report, we present Atlas, a novel vision foundation model based on the RudolfV approach. Our model was trained on a dataset comprising 1.2 million histopathology whole slide images, collected from two medical institutions: Mayo Clinic and Charité - Universtätsmedizin Berlin. Comprehensive evaluations show that Atlas achieves state-of-the-art performance across twenty-one public benchmark datasets, even though it is neither the largest model by parameter count nor by training dataset size.
       </p>
     </details>
@@ -248,7 +253,7 @@ Biomedical Foundation Models (FMs) are rapidly transforming AI-enabled healthcar
     <p>
       We measure whether pathology foundation models focus on biological features like tissue and cancer type, or on the confounding medical center signatures introduced by staining procedure and other differences. We introduce the <em>Robustness Index</em>: a novel metric reflecting to what degree biological features dominate confounding features.<br><br>
 
-Ten current publicly available pathology FMs are evaluated. We find that all current pathology foundation models evaluated represent the medical center to a strong degree.     
+
     </p>
 
     <details style="margin-top:0.2em;">
@@ -331,9 +336,12 @@ Ten current publicly available pathology FMs are evaluated. We find that all cur
        alt="pathology RNA"
        style="width:100%; height:auto; object-fit:cover; border-radius:6px; flex-shrink:0; margin-top: 6px;"></p>
 
-    <p>
+    <details style="margin-top:0.2em;">
+      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">Summary</summary>
+      <p style="margin-top:0.4em;">        
 Pathology Foundation Models (FMs) such as UNI, Phikon, RudolfV and Virchow learn to represent patterns in H&E pathology images using Self-Supervised Learning. To see whether pathology FMs can be enhanced using RNA data, we compared two approaches: finetuning a pretrained pathology FM by using RNA expression levels as a high-dimensional target vector vs. using contrastive learning in a CLIP setup. We found that both approaches can improve pathology FM performance, as evaluated on a selection of downstream tasks.
-    </p>
+</p>
+    </details>
 
   </div>
 </div>
@@ -360,12 +368,17 @@ Pathology Foundation Models (FMs) such as UNI, Phikon, RudolfV and Virchow learn
     <p style="margin-bottom:0; margin-top:-0.8em; font-size: 1.0rem">
       <strong>Edwin D. de Jong</strong>
     </p>
+
+    <details style="margin-top:0.2em;">
+      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">Summary</summary>
     <p>
     This paper studies a generative Mixture Density RNN model for sequence learning. It introduces Incremental Sequence Learning: an approach to sequence learning where the length of training sequences is gradually increased over the course of training. Incremental Sequence Learning is found to speed up sequence learning by an order of magnitude, to reduce the test error, and to perform more robustly. <br><br>
 
 The paper introduces and makes available the MNIST pen stroke sequences dataset: a novel sequence learning task and data set that represents MNIST digits as sequences of pen movements that reproduce the digit.
     </p>
-
+    </details>
+    
+<a name="arxiv-unrobust" id="PathoROB"></a>
     <details style="margin-top:0.2em;">
 <a id="projects" style="display: block; position: relative; top: -50px; visibility: hidden;"></a>      <summary style="cursor:pointer; margin-top:-0.8em; margin-top:-0.8em; font-variant: small-caps; font-size: 1.0rem;" class="small-caps">abstract</summary>
       <p style="margin-top:0.4em;">
